@@ -1,0 +1,43 @@
+{
+  "name": "myfirstapp",
+"title": "my First App",
+"version": "1.0.0",
+"description": "This project was bootstrapped with Fastify-CLI.",
+"email": "john.doe@email.com",
+"website": "http://www.mywebsite.com",
+"terms_of_service": "http://www.mywebsite.com/tos/",
+"engines": {
+  "node": "20.x"
+},
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node --test test/**/*.test.js",
+    "start": "fastify start -l info app.js",
+    "start-heroku": "node main.js",
+    "dev": "fastify start -w -l info -P app.js",
+    "info": "fastify print-routes ./routes/root.js",
+    "open_docs_win": "start http://localhost:3000/docs/json",
+    "open_docs_mac": "open http://localhost:3000/docs",
+    "serve": "npm run open_docs_mac && fastify start -w -l info -P app.js"
+    },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fastify/autoload": "^5.0.0",
+    "@fastify/cors": "^9.0.1",
+    "@fastify/formbody": "^7.4.0",
+    "@fastify/multipart": "^8.2.0",
+    "@fastify/sensible": "^5.0.0",
+    "@fastify/swagger": "^8.14.0",
+    "fastify": "^4.26.1",
+    "fastify-cli": "^6.1.1",
+    "fastify-plugin": "^4.0.0"
+  },
+  "devDependencies": {
+    "@fastify/swagger-ui": "^3.0.0"
+  }
+}
